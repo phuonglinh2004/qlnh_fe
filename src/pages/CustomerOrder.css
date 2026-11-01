@@ -1,0 +1,1022 @@
+/** {*/
+/*  box-sizing: border-box;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;*/
+/*}*/
+
+/*body {*/
+/*  background-color: #f8fafc;*/
+/*  color: #1e293b;*/
+/*  overflow-x: hidden;*/
+/*}*/
+
+/*.customer-app {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  min-height: 100vh;*/
+/*  width: 100%;*/
+/*}*/
+
+/*!* 1. Header Khách Hàng *!*/
+/*.customer-header {*/
+/*  height: 64px;*/
+/*  background: #ffffff;*/
+/*  border-bottom: 1px solid #e2e8f0;*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  padding: 0 28px;*/
+/*  position: sticky;*/
+/*  top: 0;*/
+/*  z-index: 50;*/
+/*  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);*/
+/*}*/
+
+/*.brand-badge {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  gap: 8px;*/
+/*}*/
+
+/*.brand-title {*/
+/*  font-size: 1.15rem;*/
+/*  font-weight: 900;*/
+/*  color: #ea580c;*/
+/*  letter-spacing: 0.8px;*/
+/*}*/
+
+/*!* Tag Bàn Số Đồng Bộ *!*/
+/*.table-tag {*/
+/*  display: flex;*/
+/*  align-items: baseline;*/
+/*  gap: 8px;*/
+/*  background: #fff7ed;*/
+/*  border: 1.5px solid #ffedd5;*/
+/*  padding: 6px 18px;*/
+/*  border-radius: 20px;*/
+/*}*/
+
+/*.table-tag-text {*/
+/*  font-size: 0.95rem;*/
+/*  font-weight: 800;*/
+/*  color: #c2410c;*/
+/*  letter-spacing: 0.6px;*/
+/*}*/
+
+/*.table-tag-num {*/
+/*  font-size: 1.35rem;*/
+/*  font-weight: 900;*/
+/*  color: #ea580c;*/
+/*  line-height: 1;*/
+/*}*/
+
+/*.header-cart-btn {*/
+/*  position: relative;*/
+/*  width: 42px;*/
+/*  height: 42px;*/
+/*  background: #fff7ed;*/
+/*  border: 1.5px solid #ffedd5;*/
+/*  border-radius: 12px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  cursor: pointer;*/
+/*  transition: all 0.15s ease;*/
+/*}*/
+
+/*.header-cart-btn:hover {*/
+/*  background: #ffedd5;*/
+/*}*/
+
+/*.cart-badge-number {*/
+/*  position: absolute;*/
+/*  top: -6px;*/
+/*  right: -6px;*/
+/*  background: #ea580c;*/
+/*  color: white;*/
+/*  font-size: 0.72rem;*/
+/*  font-weight: 800;*/
+/*  min-width: 18px;*/
+/*  height: 18px;*/
+/*  padding: 0 4px;*/
+/*  border-radius: 9px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  border: 2px solid #ffffff;*/
+/*}*/
+
+/*!* 2. Thanh Danh Mục Món *!*/
+/*.category-filter-bar {*/
+/*  background: #ffffff;*/
+/*  padding: 12px 28px;*/
+/*  display: flex;*/
+/*  gap: 10px;*/
+/*  overflow-x: auto;*/
+/*  border-bottom: 1px solid #f1f5f9;*/
+/*  scrollbar-width: none;*/
+/*}*/
+/*.category-filter-bar::-webkit-scrollbar { display: none; }*/
+
+/*.cat-filter-btn {*/
+/*  padding: 8px 18px;*/
+/*  border-radius: 20px;*/
+/*  border: 1px solid #e2e8f0;*/
+/*  background: #f8fafc;*/
+/*  color: #475569;*/
+/*  font-size: 0.88rem;*/
+/*  font-weight: 600;*/
+/*  cursor: pointer;*/
+/*  white-space: nowrap;*/
+/*  transition: all 0.15s;*/
+/*}*/
+
+/*.cat-filter-btn.active {*/
+/*  background: #ea580c;*/
+/*  color: white;*/
+/*  border-color: #ea580c;*/
+/*}*/
+
+/*!* 3. Khung Thân Gọi Món *!*/
+/*.main-layout {*/
+/*  display: flex;*/
+/*  flex-grow: 1;*/
+/*  padding: 24px 28px;*/
+/*  gap: 24px;*/
+/*  max-width: 1600px;*/
+/*  margin: 0 auto;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.menu-display-area {*/
+/*  flex: 1;*/
+/*  min-width: 0;*/
+/*}*/
+
+/*.food-grid {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));*/
+/*  gap: 20px;*/
+/*}*/
+
+/*.food-card {*/
+/*  background: #ffffff;*/
+/*  border: 1px solid #e2e8f0;*/
+/*  border-radius: 18px;*/
+/*  overflow: hidden;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  transition: transform 0.15s, box-shadow 0.15s;*/
+/*}*/
+
+/*.food-card:hover {*/
+/*  transform: translateY(-2px);*/
+/*  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);*/
+/*}*/
+
+/*.card-image-box {*/
+/*  height: 160px;*/
+/*  background: #f1f5f9;*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*.card-image-box img {*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  object-fit: cover;*/
+/*}*/
+
+/*.food-card-body {*/
+/*  padding: 16px;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  text-align: center;*/
+/*  flex-grow: 1;*/
+/*  justify-content: space-between;*/
+/*  gap: 10px;*/
+/*}*/
+
+/*.food-title {*/
+/*  font-size: 1rem;*/
+/*  font-weight: 700;*/
+/*  color: #1e293b;*/
+/*  min-height: 44px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.food-price {*/
+/*  font-size: 1.05rem;*/
+/*  font-weight: 800;*/
+/*  color: #ea580c;*/
+/*}*/
+
+/*!* Tùy chọn size & định lượng món lẩu *!*/
+/*.portion-selector-box {*/
+/*  display: flex;*/
+/*  gap: 6px;*/
+/*  width: 100%;*/
+/*  justify-content: center;*/
+/*  margin-top: 4px;*/
+/*}*/
+
+/*.portion-btn {*/
+/*  flex: 1;*/
+/*  padding: 5px 4px;*/
+/*  background: #f1f5f9;*/
+/*  border: 1px solid #e2e8f0;*/
+/*  border-radius: 8px;*/
+/*  font-size: 0.76rem;*/
+/*  font-weight: 700;*/
+/*  color: #475569;*/
+/*  cursor: pointer;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  gap: 2px;*/
+/*  transition: all 0.15s ease;*/
+/*}*/
+
+/*.portion-btn.active {*/
+/*  background: #fff7ed;*/
+/*  border-color: #ea580c;*/
+/*  color: #ea580c;*/
+/*}*/
+
+/*.portion-btn small {*/
+/*  font-size: 0.68rem;*/
+/*  font-weight: 600;*/
+/*  color: #94a3b8;*/
+/*}*/
+
+/*.portion-btn.active small {*/
+/*  color: #ea580c;*/
+/*}*/
+
+/*.fixed-weight-badge {*/
+/*  background: #f8fafc;*/
+/*  border: 1px dashed #cbd5e1;*/
+/*  padding: 4px 10px;*/
+/*  border-radius: 6px;*/
+/*  font-size: 0.75rem;*/
+/*  font-weight: 700;*/
+/*  color: #64748b;*/
+/*  margin-top: 4px;*/
+/*}*/
+
+/*!* Bộ điều khiển - 0 + cả hai nút đều màu cam đồng điệu *!*/
+/*.card-counter-center {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  background: #fff7ed;*/
+/*  border: 1px solid #ffedd5;*/
+/*  border-radius: 10px;*/
+/*  padding: 3px 5px;*/
+/*  width: fit-content;*/
+/*  margin-top: 4px;*/
+/*}*/
+
+/*.btn-qty-minus {*/
+/*  width: 30px;*/
+/*  height: 30px;*/
+/*  background: #ea580c;*/
+/*  border: none;*/
+/*  border-radius: 6px;*/
+/*  color: white;*/
+/*  cursor: pointer;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  transition: background 0.15s ease, opacity 0.15s ease;*/
+/*}*/
+
+/*.btn-qty-minus:disabled {*/
+/*  background: #fed7aa;*/
+/*  opacity: 0.7;*/
+/*  cursor: not-allowed;*/
+/*}*/
+
+/*.qty-val-box {*/
+/*  min-width: 34px;*/
+/*  text-align: center;*/
+/*  font-size: 0.95rem;*/
+/*  font-weight: 800;*/
+/*  color: #ea580c;*/
+/*}*/
+
+/*.btn-qty-plus {*/
+/*  width: 30px;*/
+/*  height: 30px;*/
+/*  background: #ea580c;*/
+/*  border: none;*/
+/*  border-radius: 6px;*/
+/*  color: white;*/
+/*  cursor: pointer;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  transition: background 0.15s ease;*/
+/*}*/
+
+/*.btn-qty-plus:hover,*/
+/*.btn-qty-minus:not(:disabled):hover {*/
+/*  background: #c2410c;*/
+/*}*/
+
+/*!* 4. Sidebar Giỏ Order Bên Phải *!*/
+/*.order-sidebar-card {*/
+/*  width: 360px;*/
+/*  background: #ffffff;*/
+/*  border: 1px solid #e2e8f0;*/
+/*  border-radius: 18px;*/
+/*  padding: 22px;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: space-between;*/
+/*  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);*/
+/*  position: sticky;*/
+/*  top: 88px;*/
+/*  height: fit-content;*/
+/*  max-height: calc(100vh - 110px);*/
+/*  flex-shrink: 0;*/
+/*}*/
+
+/*.order-sidebar-head {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  margin-bottom: 16px;*/
+/*  padding-bottom: 12px;*/
+/*  border-bottom: 1px solid #f1f5f9;*/
+/*}*/
+
+/*.order-sidebar-title {*/
+/*  font-size: 1.05rem;*/
+/*  font-weight: 800;*/
+/*  color: #0f172a;*/
+/*}*/
+
+/*.order-items-list {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 12px;*/
+/*  overflow-y: auto;*/
+/*  max-height: 42vh;*/
+/*  margin-bottom: 16px;*/
+/*  padding-right: 4px;*/
+/*}*/
+
+/*.order-line-item {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  font-size: 0.92rem;*/
+/*}*/
+
+/*.line-item-name {*/
+/*  color: #334155;*/
+/*  font-weight: 600;*/
+/*}*/
+
+/*.line-item-price {*/
+/*  font-weight: 700;*/
+/*  color: #0f172a;*/
+/*}*/
+
+/*.order-total-row {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  padding-top: 14px;*/
+/*  border-top: 1px solid #f1f5f9;*/
+/*  margin-bottom: 16px;*/
+/*}*/
+
+/*.total-label {*/
+/*  font-weight: 600;*/
+/*  color: #64748b;*/
+/*}*/
+
+/*.total-val {*/
+/*  font-size: 1.2rem;*/
+/*  font-weight: 800;*/
+/*  color: #ea580c;*/
+/*}*/
+
+/*.btn-confirm-kitchen {*/
+/*  width: 100%;*/
+/*  padding: 13px;*/
+/*  background: #ea580c;*/
+/*  color: white;*/
+/*  border: none;*/
+/*  border-radius: 10px;*/
+/*  font-size: 0.95rem;*/
+/*  font-weight: 700;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.btn-confirm-kitchen:hover {*/
+/*  background: #c2410c;*/
+/*}*/
+
+/*!* 5. Tối ưu Mobile *!*/
+/*@media (max-width: 900px) {*/
+/*  .customer-header { padding: 0 16px; }*/
+/*  .main-layout { padding: 16px; }*/
+/*  .food-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }*/
+/*  .card-image-box { height: 120px; }*/
+/*  .order-sidebar-card {*/
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    max-height: 65vh;*/
+/*    border-radius: 20px 20px 0 0;*/
+/*    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);*/
+/*    z-index: 100;*/
+/*  }*/
+/*}*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+.customer-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* 1. Header Khách Hàng */
+.customer-header {
+    height: 64px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.brand-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #ea580c;
+    letter-spacing: 0.8px;
+}
+
+/* Tag Bàn Số Đồng Bộ */
+.table-tag {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    background: #fff7ed;
+    border: 1.5px solid #ffedd5;
+    padding: 6px 18px;
+    border-radius: 20px;
+}
+
+.table-tag-text {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #c2410c;
+    letter-spacing: 0.6px;
+}
+
+.table-tag-num {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #ea580c;
+    line-height: 1;
+}
+
+/* Nút bấm Header (Chuông & Giỏ hàng) */
+.header-action-btn {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    background: #fff7ed;
+    border: 1.5px solid #ffedd5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.header-action-btn:hover {
+    background: #ffedd5;
+    transform: translateY(-1px);
+}
+
+.header-action-btn.bell-btn:active {
+    background: #fed7aa;
+}
+
+.cart-badge-number {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ea580c;
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 800;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+}
+
+/* 2. Thanh Danh Mục Món */
+.category-filter-bar {
+    background: #ffffff;
+    padding: 12px 28px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    border-bottom: 1px solid #f1f5f9;
+    scrollbar-width: none;
+}
+.category-filter-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-filter-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+}
+
+.cat-filter-btn.active {
+    background: #ea580c;
+    color: white;
+    border-color: #ea580c;
+}
+
+/* 3. Khung Thân Gọi Món */
+.main-layout {
+    display: flex;
+    flex-grow: 1;
+    padding: 24px 28px;
+    gap: 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu-display-area {
+    flex: 1;
+    min-width: 0;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.food-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.food-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.card-image-box {
+    height: 160px;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    display: block;
+}
+
+.food-card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.food-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-price {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ea580c;
+}
+
+/* Tùy chọn size & định lượng món lẩu */
+.portion-selector-box {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.portion-btn {
+    flex: 1;
+    padding: 5px 4px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #475569;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    transition: all 0.15s ease;
+}
+
+.portion-btn.active {
+    background: #fff7ed;
+    border-color: #ea580c;
+    color: #ea580c;
+}
+
+.portion-btn small {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.portion-btn.active small {
+    color: #ea580c;
+}
+
+.fixed-weight-badge {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* Bộ điều khiển - 0 + */
+.card-counter-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
+    border-radius: 10px;
+    padding: 3px 5px;
+    width: fit-content;
+    margin-top: 4px;
+}
+
+.btn-qty-minus {
+    width: 30px;
+    height: 30px;
+    background: #ea580c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-qty-minus:disabled {
+    background: #fed7aa;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.qty-val-box {
+    min-width: 34px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #ea580c;
+}
+
+.btn-qty-plus {
+    width: 30px;
+    height: 30px;
+    background: #ea580c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+}
+
+.btn-qty-plus:hover,
+.btn-qty-minus:not(:disabled):hover {
+    background: #c2410c;
+}
+
+/* 4. Sidebar Giỏ Order Bên Phải */
+.order-sidebar-card {
+    width: 360px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 88px;
+    height: fit-content;
+    max-height: calc(100vh - 110px);
+    flex-shrink: 0;
+}
+
+.order-sidebar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.order-sidebar-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.order-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    max-height: 42vh;
+    margin-bottom: 16px;
+    padding-right: 4px;
+}
+
+.order-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.92rem;
+}
+
+.line-item-name {
+    color: #334155;
+    font-weight: 600;
+}
+
+.line-item-price {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.order-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid #f1f5f9;
+    margin-bottom: 16px;
+}
+
+.total-label {
+    font-weight: 600;
+    color: #64748b;
+}
+
+.total-val {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ea580c;
+}
+
+.btn-confirm-kitchen {
+    width: 100%;
+    padding: 13px;
+    background: #ea580c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-confirm-kitchen:hover {
+    background: #c2410c;
+}
+
+/* 5. Modal Chuông Gọi Phục Vụ Tại Bàn */
+.service-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.service-modal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.service-modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.service-modal-head h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.btn-close-modal {
+    border: none;
+    background: #f1f5f9;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-close-modal:hover {
+    background: #e2e8f0;
+}
+
+.service-modal-subtitle {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+.service-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-service-opt {
+    padding: 14px 10px;
+    border-radius: 12px;
+    border: 1.5px solid #fed7aa;
+    background: #fffaf5;
+    color: #c2410c;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+}
+
+.btn-service-opt:hover {
+    background: #ea580c;
+    color: #ffffff;
+    border-color: #ea580c;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
+}
+
+.service-success-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.service-success-box p {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #16a34a;
+    margin: 0;
+}
+
+/* 6. Tối ưu Mobile */
+@media (max-width: 900px) {
+    .customer-header {
+        padding: 0 16px;
+    }
+    .main-layout {
+        padding: 16px;
+    }
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .card-image-box {
+        height: 120px;
+    }
+    .order-sidebar-card {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 65vh;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+    }
+}

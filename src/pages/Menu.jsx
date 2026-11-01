@@ -61,10 +61,12 @@ export default function Menu() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {filteredItems.map(item => (
                     <div key={item.item_id} className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        {/* ĐÃ SỬA LỖI ẢNH: Dùng new URL để tìm file trong thư mục assets */}
                         <img
-                            src={item.image_url || 'https://via.placeholder.com/300x200?text=No+Image'}
+                            src={item.image_url ? new URL(`../assets/${item.image_url}`, import.meta.url).href : 'https://placehold.co/300x200?text=No+Image'}
                             alt={item.name}
                             className="w-full h-32 object-cover"
+                            onError={(e) => { e.target.src = 'https://placehold.co/300x200?text=No+Image'; }}
                         />
                         <div className="p-3">
                             <p className="text-xs text-orange-500 font-semibold mb-1">{item.category_name}</p>

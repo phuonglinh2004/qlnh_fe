@@ -11,19 +11,24 @@ export default function AdminLayout() {
 
     const handleLogout = () => {
         localStorage.clear();
-        navigate('/');
+        navigate('/login'); // Đăng xuất thì đá về trang đăng nhập
     };
 
     // Cấu hình màu sắc
     const navyColor = '#1e3a8a';
     const activeColor = '#2563eb';
 
-    // Cấu hình Menu (Có phân quyền)
     const allMenuItems = [
-        { path: '/dashboard', name: 'Tổng quan', icon: 'bi-speedometer2', roles: ['admin'] },
+        { path: '/admin', name: 'Tổng quan', icon: 'bi-speedometer2', roles: ['admin'] },
         { path: '/tables', name: 'Sơ đồ bàn', icon: 'bi-grid', roles: ['admin', 'waiter', 'cashier'] },
-        { path: '/menu', name: 'Thực đơn', icon: 'bi-egg-fried', roles: ['admin'] },
+        { path: '/admin/menu', name: 'Thực đơn', icon: 'bi-egg-fried', roles: ['admin'] },
+        { path: '/billing', name: 'Thu ngân', icon: 'bi-cash-coin', roles: ['admin', 'cashier'] },
+        { path: '/admin/staff', name: 'Nhân sự', icon: 'bi-people', roles: ['admin'] },
+        { path: '/admin/vouchers', name: 'Voucher & QC', icon: 'bi-ticket-perforated', roles: ['admin'] }, // <-- ĐÃ THÊM DÒNG NÀY
         { path: '/kitchen', name: 'Màn hình bếp', icon: 'bi-fire', roles: ['admin', 'kitchen'] },
+        { path: '/shifts', name: 'Ca làm việc', icon: 'bi-clock', roles: ['admin', 'cashier'] },
+        { path: '/admin/inventory', name: 'Nhập kho', icon: 'bi-box-seam', roles: ['admin'] },
+        { path: '/admin/purchase-orders', name: 'Lịch sử nhập', icon: 'bi-clock-history', roles: ['admin'] },
     ];
 
     // Lọc menu: Chỉ hiển thị những menu mà Role hiện tại được phép xem
@@ -37,7 +42,8 @@ export default function AdminLayout() {
                     <i className="bi bi-list fs-3"></i>
                 </button>
 
-                <Link className="navbar-brand fw-bold ms-2 tracking-wide" to="/">
+                {/* Logo dẫn về đúng trang chủ của từng role */}
+                <Link className="navbar-brand fw-bold ms-2 tracking-wide" to={userRole === 'kitchen' ? '/kitchen' : '/admin'}>
                     <i className="bi bi-shop me-2"></i>RESTO MANAGER
                 </Link>
 
